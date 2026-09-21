@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Seed Code CLI - Open Source AI Coding Agent | Fast Installation (v6.2.5)</title>
+  <meta name="title" content="Seed Code CLI - Open Source AI Coding Agent | Fast Installation (v6.2.5)">
+  <meta name="description" content="Official installation page for Seed Code CLI, an open-source AI coding agent by Eagox Studio (Al Shahriar Sowan). Install instantly on Windows, Linux, and macOS using PowerShell IRM or Bash script.">
+  <meta name="keywords" content="Seed code CLI, Seedcode CLI, Seed Code, AI Coding Agent, Open Source AI Agent, seedcode-cli, Eagox Studio, Al Shahriar Sowan, install seed code, developer tools">
+  <meta name="author" content="Al Shahriar Sowan">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://seedcode-cli.vercel.app/">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seedcode-cli.vercel.app/">
+  <meta property="og:title" content="Seed Code CLI - Open Source AI Coding Agent">
+  <meta property="og:description" content="Install Seed Code CLI (v6.2.5) instantly on Windows, Linux, and macOS. Open-source AI coding agent developed by Eagox Studio.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Alshahriar-07/ssedcode-web/refs/heads/main/img/logo.png">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://seedcode-cli.vercel.app/">
+  <meta property="twitter:title" content="Seed Code CLI - Open Source AI Coding Agent">
+  <meta property="twitter:description" content="Install Seed Code CLI (v6.2.5) instantly on Windows, Linux, and macOS. Open-source AI coding agent developed by Eagox Studio.">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/Alshahriar-07/ssedcode-web/refs/heads/main/img/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Alshahriar-07/ssedcode-web/refs/heads/main/img/logo.png">
+
+  <!-- JSON-LD Structured Data for Search Engine Optimization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Seed Code CLI",
+        "alternateName": "Seedcode CLI",
+        "operatingSystem": "Windows, Linux, macOS",
+        "applicationCategory": "DeveloperApplication",
+        "softwareVersion": "6.2.5",
+        "description": "An Open Source AI Coding Agent designed to assist developers directly in the command line interface.",
+        "url": "https://seedcode-cli.vercel.app/",
+        "downloadUrl": "https://seedcode-cli.vercel.app/install.ps1",
+        "codeRepository": "https://github.com/Alshahriar-07/seedcode-cli",
+        "author": {
+          "@type": "Person",
+          "name": "Al Shahriar Sowan",
+          "url": "https://alshahriarsayon.vercel.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Eagox Studio",
+          "url": "https://eagoxstudio.vercel.app/"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Seed Code Web",
+        "url": "https://seedcode-web.vercel.app/",
+        "about": {
+          "@type": "Thing",
+          "name": "Seed Code Open Source AI Coding Agent"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pure: '#000000',
+            brand: {
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Minimal Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #222222;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #333333;
+    }
+  </style>
+</head>
+
+<body class="bg-pure text-zinc-300 font-sans min-h-screen flex flex-col justify-between selection:bg-brand-500/30 selection:text-brand-400">
+
+  <header class="w-full max-w-4xl mx-auto px-6 py-8 flex items-center justify-between border-b border-zinc-900">
+    <a href="https://seedcode-web.vercel.app/" target="_blank" class="flex items-center gap-3 group" title="Seed Code Official Website">
+      <img 
+        src="https://raw.githubusercontent.com/Alshahriar-07/ssedcode-web/refs/heads/main/img/logo.png" 
+        alt="Seed Code Logo - Open Source AI Agent" 
+        class="h-8 w-8 object-contain transition-transform group-hover:scale-105"
+        onerror="this.onerror=null; this.src='https://placehold.co/80x80/000000/22c55e?text=SC';"
+      />
+      <span class="font-bold text-lg tracking-tight text-white group-hover:text-brand-400 transition-colors">Seed Code</span>
+    </a>
+
+    <div class="flex items-center gap-4 text-xs font-mono">
+      <span class="px-2.5 py-1 rounded bg-zinc-900 text-brand-400 border border-zinc-800" title="Current Version">
+        v6.2.5
+      </span>
+      <a href="https://github.com/Alshahriar-07/seedcode-cli" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-white transition-colors" title="Seed Code GitHub Repository">
+        <i class="fa-brands fa-github text-base" aria-hidden="true"></i>
+        <span class="sr-only">GitHub Repository</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="w-full max-w-3xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center items-center text-center">
+    
+    <!-- Tagline Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-brand-400 text-xs font-mono font-medium mb-6">
+      <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+      OPENSOURCE AI CODING AGENT
+    </div>
+
+    <!-- Main Heading -->
+    <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+      Install <span class="text-brand-400">Seed Code CLI</span>
+    </h1>
+    <p class="text-zinc-400 text-sm md:text-base max-w-lg mb-8">
+      Seed Code is an advanced open-source AI coding agent. Choose your operating system below to copy the one-line IRM or Bash installation script.
+    </p>
+
+    <!-- Installation Commands Container -->
+    <article class="w-full space-y-4 text-left">
+      <h2 class="sr-only">Installation Commands for Windows, Linux, and Mac</h2>
+
+      <!-- Windows Section -->
+      <section class="bg-zinc-950 rounded-lg border border-zinc-900 p-4 transition-border hover:border-zinc-800">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xs font-semibold text-zinc-400 flex items-center gap-2">
+            <i class="fa-brands fa-windows text-brand-400" aria-hidden="true"></i> Windows (PowerShell IRM)
+          </h3>
+          <span class="text-[10px] font-mono text-zinc-600">PowerShell</span>
+        </div>
+        <div class="flex items-center justify-between bg-pure border border-zinc-900 rounded p-3 font-mono text-xs md:text-sm text-zinc-200">
+          <code class="overflow-x-auto whitespace-nowrap py-0.5 text-brand-400 pr-2">
+            irm https://seedcode-cli.vercel.app/install.ps1 | iex
+          </code>
+          <button 
+            onclick="copyCode('irm https://seedcode-cli.vercel.app/install.ps1 | iex', this)"
+            aria-label="Copy Windows IRM installation command"
+            class="shrink-0 bg-zinc-900 hover:bg-brand-500 hover:text-black text-zinc-300 px-3 py-1.5 rounded text-xs transition-colors font-sans flex items-center gap-1.5 border border-zinc-800">
+            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+            <span>Copy</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Linux & macOS Section -->
+      <section class="bg-zinc-950 rounded-lg border border-zinc-900 p-4 transition-border hover:border-zinc-800">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-xs font-semibold text-zinc-400 flex items-center gap-2">
+            <i class="fa-brands fa-apple text-brand-400" aria-hidden="true"></i>
+            <i class="fa-brands fa-linux text-brand-400 -ml-1" aria-hidden="true"></i> Linux & macOS (Curl Script)
+          </h3>
+          <span class="text-[10px] font-mono text-zinc-600">Bash / Curl</span>
+        </div>
+        <div class="flex items-center justify-between bg-pure border border-zinc-900 rounded p-3 font-mono text-xs md:text-sm text-zinc-200">
+          <code class="overflow-x-auto whitespace-nowrap py-0.5 text-brand-400 pr-2">
+            curl -fsSL https://seedcode-cli.vercel.app/install.sh | bash
+          </code>
+          <button 
+            onclick="copyCode('curl -fsSL https://seedcode-cli.vercel.app/install.sh | bash', this)"
+            aria-label="Copy Linux and macOS installation command"
+            class="shrink-0 bg-zinc-900 hover:bg-brand-500 hover:text-black text-zinc-300 px-3 py-1.5 rounded text-xs transition-colors font-sans flex items-center gap-1.5 border border-zinc-800">
+            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+            <span>Copy</span>
+          </button>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- SEO Rich Text Details -->
+    <section class="mt-10 text-xs text-zinc-500 max-w-xl leading-relaxed">
+      <p>
+        <strong>Seed Code CLI (seedcode-cli)</strong> is an open-source AI developer tool designed by <a href="https://eagoxstudio.vercel.app/" target="_blank" class="text-zinc-400 underline hover:text-brand-400">Eagox Studio</a> and maintained by <a href="https://alshahriarsayon.vercel.app/" target="_blank" class="text-zinc-400 underline hover:text-brand-400">Al Shahriar Sowan</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="w-full max-w-4xl mx-auto px-6 py-8 border-t border-zinc-900 text-xs text-zinc-500">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Company & Author Info -->
+      <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1">
+        <span>By <a href="https://eagoxstudio.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-brand-400 transition-colors font-medium">Eagox Studio</a></span>
+        <span class="text-zinc-800">•</span>
+        <span>Author: <a href="https://alshahriarsayon.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-brand-400 transition-colors">Al shahriar sowan</a></span>
+      </div>
+
+      <!-- Links -->
+      <div class="flex items-center gap-4">
+        <a href="https://seedcode-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">Main Website</a>
+        <a href="https://github.com/Alshahriar-07/seedcode-cli" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">GitHub Repository</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    function copyCode(text, buttonEl) {
+      const tempInput = document.createElement("input");
+      tempInput.style.position = "absolute";
+      tempInput.style.left = "-9999px";
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      
+      try {
+        document.execCommand('copy');
+        
+        // Update UI button state
+        const originalHTML = buttonEl.innerHTML;
+        buttonEl.innerHTML = `<i class="fa-solid fa-check text-black"></i> <span class="font-semibold text-black">Copied!</span>`;
+        buttonEl.classList.add('bg-brand-500', 'text-black', 'border-brand-500');
+        buttonEl.classList.remove('bg-zinc-900', 'text-zinc-300', 'border-zinc-800');
+
+        setTimeout(() => {
+          buttonEl.innerHTML = originalHTML;
+          buttonEl.classList.remove('bg-brand-500', 'text-black', 'border-brand-500');
+          buttonEl.classList.add('bg-zinc-900', 'text-zinc-300', 'border-zinc-800');
+        }, 2000);
+
+      } catch (err) {
+        console.error('Failed to copy command: ', err);
+      }
+      
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>
