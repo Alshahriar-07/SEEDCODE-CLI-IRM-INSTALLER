@@ -1,4 +1,4 @@
-1ce44036d45a99630e557f44ee1afd2f45c2be7dc09d475dfd151c392d1d8bec *seedcode_cli-7.2.5-py3-none-any.whl
-86ebc7b142c2a0f00866ed3be16674896d8e45bf67d97c5124245e573a2b9503 *seedcode_cli-7.2.5.tar.gz
-86e57fd74fc8609d38b6f6c0f8a8592cdb03c864876892e932b1f620b9741a76 *SeedCode-CLI-7.2.5-windows-x64.exe
-597f107bdbd3b6a157a8aed928e0c140033cb031d614e7768895d630cccb51d1 *SeedCode-CLI-Setup-7.2.5.exe
+18db2b552b50ea170454d027168af1b7d262e9b26b9713cd00c92e7f14ee4d89  SeedCode-CLI-8.1.0-windows-x64.exe
+3bd4e36140e7b4bb4a8bc5aaa52019de339d1234abe7af1adc182d3260c93fb8  SeedCode-CLI-Setup-8.1.0.exe
+008a33aba09d55faad1558d453ef3d766a6506fa1daa6b4712564a431d70b2c1  seedcode_cli-8.1.0-py3-none-any.whl
+cf2b1bb5d40cd22a13e6eff4ab09168671dd0590d5d70d707f4ca4fa644209a9  seedcode_cli-8.1.0.tar.gz
