@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.className='js'</script>
 
-<title>Seed Code CLI - Open Source AI Coding Agent | Fast Installation (v7.2.5)</title>
-<meta name="title" content="Seed Code CLI - Open Source AI Coding Agent | Fast Installation (v7.2.5)">
-<meta name="description" content="Official installation page for Seed Code CLI v7.2.5, an open-source AI coding agent by Eagox Studio (Al Shahriar Sowan). Install instantly on Windows, Linux, and macOS. Licensed under PolyForm Noncommercial 1.0.0.">
+<title>Seed Code CLI - Open Source AI Coding Agent | Fast Installation (v8.2.5)</title>
+<meta name="title" content="Seed Code CLI - Open Source AI Coding Agent | Fast Installation (v8.2.5)">
+<meta name="description" content="Official installation page for Seed Code CLI v8.2.5, an open-source AI coding agent by Eagox Studio (Al Shahriar Sowan). Install instantly on Windows, Linux, and macOS. Licensed under PolyForm Noncommercial 1.0.0.">
 <meta name="keywords" content="SeedCode Cli, Seedcode CLI, Seed Code, AI Coding Agent, Open Source AI Agent, seedcode-cli, Eagox Studio, Al Shahriar Sowan, install seed code, developer tools">
 <meta name="author" content="Al Shahriar Sowan">
 <meta name="robots" content="index, follow">
@@ -17,13 +17,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://seedcode-cli.vercel.app/">
 <meta property="og:title" content="Seed Code CLI - Open Source AI Coding Agent">
-<meta property="og:description" content="Install Seed Code CLI (v7.2.5) instantly on Windows, Linux, and macOS. AI coding agent developed by Eagox Studio.">
+<meta property="og:description" content="Install Seed Code CLI (v8.2.5) instantly on Windows, Linux, and macOS. AI coding agent developed by Eagox Studio.">
 <meta property="og:image" content="https://raw.githubusercontent.com/Alshahriar-07/ssedcode-web/refs/heads/main/img/logo.png">
 
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://seedcode-cli.vercel.app/">
 <meta property="twitter:title" content="Seed Code CLI - Open Source AI Coding Agent">
-<meta property="twitter:description" content="Install Seed Code CLI v7.2.5 instantly on Windows, Linux, and macOS. AI coding agent developed by Eagox Studio.">
+<meta property="twitter:description" content="Install Seed Code CLI v8.2.5 instantly on Windows, Linux, and macOS. AI coding agent developed by Eagox Studio.">
 <meta property="twitter:image" content="https://raw.githubusercontent.com/Alshahriar-07/ssedcode-web/refs/heads/main/img/logo.png">
 
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Alshahriar-07/ssedcode-web/refs/heads/main/img/logo.png">
@@ -38,7 +38,7 @@
       "alternateName": "Seedcode CLI",
       "operatingSystem": "Windows, Linux, macOS",
       "applicationCategory": "DeveloperApplication",
-      "softwareVersion": "7.2.5",
+      "softwareVersion": "8.2.5",
       "description": "An AI coding agent designed to assist developers directly in the command line interface.",
       "url": "https://seedcode-cli.vercel.app/",
       "downloadUrl": "https://seedcode-cli.vercel.app/install.ps1",
@@ -153,6 +153,31 @@ body.go .win{animation:on .9s .3s cubic-bezier(.2,.8,.2,1) both}
 @keyframes fill{to{width:100%}}
 .hint{margin-top:12px;font-size:13px;color:var(--mute)}
 
+/* what's new */
+.wn{width:100%;max-width:1080px;margin:0 auto;padding:0 24px 56px}
+.wn-in{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:24px 26px 28px}
+.wn-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 20px;padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.wn-h{display:inline-flex;align-items:center;gap:8px;font:600 13px var(--mono);color:var(--leaf);letter-spacing:.01em}
+.wn-stat{font:12px var(--mono);color:var(--mute)}
+.wn-stat .cnt{color:var(--lime);font-weight:600}
+.wn-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.wn-group{transition:transform .3s cubic-bezier(.3,1.4,.5,1)}
+.wn-group:hover{transform:translateY(-3px)}
+.wn-group h3{font:600 14px 'Bricolage Grotesque',sans-serif;color:var(--bone);margin-bottom:12px;padding-left:11px;border-left:2px solid var(--leaf)}
+.wn-group ul{list-style:none;display:grid;gap:10px}
+.wn-group li{position:relative;padding-left:14px;font-size:13.5px;line-height:1.6;color:var(--mute);transition:color .2s}
+.wn-group li:hover{color:var(--bone)}
+.wn-group li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--leaf);opacity:.65}
+.wn-group code{font:12px var(--mono);color:var(--lime);background:rgba(190,242,100,.08);padding:1px 6px;border-radius:5px}
+@media(max-width:760px){.wn-groups{grid-template-columns:1fr;gap:22px}}
+
+/* scroll-triggered reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d,0)*90ms)}
+.reveal.in{opacity:1;transform:none}
+
+/* scroll progress */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--leaf),var(--lime));z-index:60;transition:width .1s linear}
+
 /* footer */
 .ft{width:100%;max-width:1080px;margin:0 auto;padding:32px 24px 40px;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;font-size:13px;color:var(--mute)}
 .lic{border:1px solid var(--line);border-radius:12px;background:var(--panel);font:12.5px/1.85 var(--mono);overflow:hidden}
@@ -169,6 +194,7 @@ body.go .win{animation:on .9s .3s cubic-bezier(.2,.8,.2,1) both}
 </head>
 
 <body>
+<div id="prog" aria-hidden="true"></div>
 <canvas id="bg" aria-hidden="true"></canvas>
 
 <div id="boot" aria-hidden="true">
@@ -183,7 +209,7 @@ body.go .win{animation:on .9s .3s cubic-bezier(.2,.8,.2,1) both}
   </a>
   <div class="meta">
     <a class="chip lic-c" href="https://polyformproject.org/licenses/noncommercial/1.0.0/" target="_blank" rel="noopener" title="View the license">PolyForm Noncommercial</a>
-    <span class="chip v" title="Current version">v7.2.5</span>
+    <span class="chip v" title="Current version">v8.2.5</span>
     <a class="gh" href="https://github.com/Alshahriar-07/seedcode-cli" target="_blank" rel="noopener noreferrer" title="Seed Code GitHub Repository"><i class="fa-brands fa-github" aria-hidden="true"></i><span style="position:absolute;left:-9999px">GitHub Repository</span></a>
   </div>
 </header>
@@ -194,17 +220,17 @@ body.go .win{animation:on .9s .3s cubic-bezier(.2,.8,.2,1) both}
     <h1><span class="w"><b style="--d:0">Install</b></span><span class="w"><b style="--d:1">Seed</b></span><span class="w"><b style="--d:2">Code</b></span><span class="w"><b style="--d:3">CLI</b></span></h1>
     <p class="lede">An AI coding agent that lives in your terminal. Pick your system, paste one command, and start building.</p>
     <div class="dl">
-      <a class="btn main" href="https://github.com/Alshahriar-07/seedcode-cli/releases/download/v7.2.5/SeedCode-CLI-Setup-7.2.5.exe" rel="noopener" download>
+      <a class="btn main" href="https://github.com/Alshahriar-07/seedcode-cli/releases/download/v8.2.5/SeedCode-CLI-Setup-8.2.5.exe" rel="noopener" download>
         <i class="fa-brands fa-windows" aria-hidden="true"></i>
-        <span>Windows installer<small>SeedCode-CLI-Setup-7.2.5.exe</small></span>
+        <span>Windows installer<small>SeedCode-CLI-Setup-8.2.5.exe</small></span>
       </a>
-      <a class="btn" href="https://github.com/Alshahriar-07/seedcode-cli/archive/refs/tags/v7.2.5.zip" rel="noopener" download>
+      <a class="btn" href="https://github.com/Alshahriar-07/seedcode-cli/archive/refs/tags/v8.2.5.zip" rel="noopener" download>
         <i class="fa-solid fa-file-zipper" aria-hidden="true"></i>
-        <span>Source code<small>v7.2.5.zip</small></span>
+        <span>Source code<small>v8.2.5.zip</small></span>
       </a>
     </div>
     <dl class="facts">
-      <div><dt>Latest release</dt><dd>v7.2.5</dd></div>
+      <div><dt>Latest release</dt><dd>v8.2.5</dd></div>
       <div><dt>Runs on</dt><dd>Windows, macOS, Linux</dd></div>
       <div><dt>pip needs</dt><dd>Python 3.12+</dd></div>
       <div><dt>License</dt><dd>PolyForm Noncommercial 1.0.0</dd></div>
@@ -232,8 +258,42 @@ body.go .win{animation:on .9s .3s cubic-bezier(.2,.8,.2,1) both}
   </section>
 </main>
 
+<section class="wn" aria-label="What's new in v8.2.5">
+  <div class="wn-in">
+    <div class="wn-top reveal">
+      <p class="wn-h"><span class="pulse"></span>Changelog &mdash; v8.2.5</p>
+      <p class="wn-stat"><span class="cnt" data-target="987">0</span> tests passing</p>
+    </div>
+    <div class="wn-groups">
+      <div class="wn-group reveal" style="--d:0">
+        <h3>Agent Mode, unified</h3>
+        <ul>
+          <li>Two modes, not three &mdash; Chat and Agent. <code>/mode code</code>, <code>/codemode</code>, <code>/assist</code>, and <code>/desktop</code> now all resolve to Agent Mode.</li>
+          <li><code>/agent on</code> carries Code Mode's old powers with it: <code>.seedcode</code> memory + index and the persistent plan &rarr; execute &rarr; verify loop.</li>
+          <li>Agent Mode reads, edits, and searches files, runs terminal commands, installs deps, and iterates on failing tests on its own.</li>
+        </ul>
+      </div>
+      <div class="wn-group reveal" style="--d:1">
+        <h3>Interface &amp; performance</h3>
+        <ul>
+          <li>Mode-switch freeze and flicker fixed at the root &mdash; the terminal app is built once and re-entered, not rebuilt per switch.</li>
+          <li>A bounded permission panel handles allow/deny in place: <code>Enter</code> allows, <code>A</code> allows for the session, <code>D</code> denies, <code>Esc</code> cancels.</li>
+          <li>Streamed replies now update only the conversation region &mdash; the logo, header, and input box stay put.</li>
+        </ul>
+      </div>
+      <div class="wn-group reveal" style="--d:2">
+        <h3>Release</h3>
+        <ul>
+          <li>Providers, models, shortcuts, history, and project memory all carry over untouched.</li>
+          <li>Docs, wheel, sdist, npm tarball, and the Windows installer are rebuilt with fresh, verified SHA256 checksums.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="ft">
-  <figure class="lic">
+  <figure class="lic reveal">
     <figcaption><i class="fa-regular fa-file-lines" aria-hidden="true"></i>LICENSE</figcaption>
     <div>
       <strong>Seed Code CLI</strong><br>
@@ -242,7 +302,7 @@ body.go .win{animation:on .9s .3s cubic-bezier(.2,.8,.2,1) both}
       Required Notice: Copyright © 2026 Al Shahriar Sowan.
     </div>
   </figure>
-  <div>
+  <div class="reveal" style="--d:1">
     <p>
       <strong style="color:var(--bone)">Seed Code CLI (seedcode-cli)</strong> is an AI developer tool designed by
       <a href="https://eagoxstudio.vercel.app/" target="_blank" rel="noopener noreferrer">Eagox Studio</a>
@@ -260,7 +320,7 @@ body.go .win{animation:on .9s .3s cubic-bezier(.2,.8,.2,1) both}
 <script>
 const $=s=>document.querySelector(s);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const V='7.2.5';
+const V='8.2.5';
 
 /* ---------- boot sequence ---------- */
 const boot=$('#boot'),bt=$('#boot-text'),bb=$('#boot-bar');
@@ -356,6 +416,49 @@ function draw(){
   t++;if(!reduced)requestAnimationFrame(draw);
 }
 size();draw();
+
+/* ---------- scroll progress ---------- */
+const prog=$('#prog');
+function updProg(){
+  const h=document.documentElement;
+  const max=h.scrollHeight-h.clientHeight;
+  prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+}
+addEventListener('scroll',updProg,{passive:true});
+updProg();
+
+/* ---------- reveal on scroll ---------- */
+const revealEls=[...document.querySelectorAll('.reveal')];
+if(reduced||!('IntersectionObserver' in window)){
+  revealEls.forEach(el=>el.classList.add('in'));
+}else{
+  const io=new IntersectionObserver((ents)=>{
+    ents.forEach(ent=>{if(ent.isIntersecting){ent.target.classList.add('in');io.unobserve(ent.target)}});
+  },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  revealEls.forEach(el=>io.observe(el));
+}
+
+/* ---------- count-up ---------- */
+const cnt=$('.cnt');
+if(cnt){
+  const target=+cnt.dataset.target;
+  if(reduced||!('IntersectionObserver' in window)){cnt.textContent=target}
+  else{
+    const cio=new IntersectionObserver((ents)=>{
+      ents.forEach(ent=>{
+        if(!ent.isIntersecting)return;
+        cio.unobserve(ent.target);
+        const dur=1000,t0=performance.now();
+        (function tick(now){
+          const p=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);
+          cnt.textContent=Math.round(e*target);
+          if(p<1)requestAnimationFrame(tick);
+        })(t0);
+      });
+    },{threshold:.6});
+    cio.observe(cnt);
+  }
+}
 </script>
 </body>
 </html>
