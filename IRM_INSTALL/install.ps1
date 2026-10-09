@@ -70,7 +70,7 @@ $ErrorActionPreference = "Stop"
 Set-StrictMode -Version 2.0
 
 # --- constants ---------------------------------------------------------------
-$Repo        = "Alshahriar-07/seedcode-cli"
+$Repo        = "Alshahriar-07/SeedCode-Cli_Public"
 $ReleaseBase = "https://github.com/$Repo/releases/download/v$Version"
 $SumsUrl     = "$ReleaseBase/SHA256SUMS.txt"
 $ExeName     = "seedcode.exe"

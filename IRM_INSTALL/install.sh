@@ -38,7 +38,7 @@ IFS=$'\n\t'
 umask 022
 
 # --- constants ---------------------------------------------------------------
-REPO="Alshahriar-07/seedcode-cli"
+REPO="Alshahriar-07/SeedCode-Cli_Public"
 DEFAULT_VERSION="9.1.1"
 USER_AGENT="seedcode-cli-installer/${DEFAULT_VERSION}"
 
