@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    Seed Code CLI v9.1.1 - official Windows remote installer.
+    Seed Code CLI v9.2.0 - official Windows remote installer.
 
 .DESCRIPTION
     Installs Seed Code CLI for the CURRENT USER. No administrator rights, no
@@ -31,10 +31,10 @@
 
     Or, to pass options, download-then-run:
 
-        & ([scriptblock]::Create((irm https://seedcode-cli.vercel.app/install.ps1))) -Version 9.1.1
+        & ([scriptblock]::Create((irm https://seedcode-cli.vercel.app/install.ps1))) -Version 9.2.0
 
 .PARAMETER Version
-    Release version to install. Defaults to 9.1.1 (the current stable release).
+    Release version to install. Defaults to 9.2.0 (the current stable release).
 
 .PARAMETER InstallDir
     Install directory. Defaults to %LOCALAPPDATA%\Programs\SeedCode.
@@ -59,7 +59,7 @@
 #>
 [CmdletBinding()]
 param(
-    [string] $Version = "9.1.1",
+    [string] $Version = "9.2.0",
     [string] $InstallDir = "",
     [switch] $NoPathUpdate,
     [switch] $Force,
@@ -70,7 +70,7 @@ $ErrorActionPreference = "Stop"
 Set-StrictMode -Version 2.0
 
 # --- constants ---------------------------------------------------------------
-$Repo        = "Alshahriar-07/SeedCode-Cli_Public"
+$Repo        = "Alshahriar-07/seedcode-cli"
 $ReleaseBase = "https://github.com/$Repo/releases/download/v$Version"
 $SumsUrl     = "$ReleaseBase/SHA256SUMS.txt"
 $ExeName     = "seedcode.exe"
@@ -301,7 +301,16 @@ function Test-InstalledVersion([string] $ExePath, [string] $Expected) {
     } catch {
         return $false
     }
-    return ($reported -like "*v$Expected*") -or ($reported -like "* $Expected*")
+    if (-not $reported) { return $false }
+    # Boundary-checked match, not a substring search: '19.2.0' must not pass
+    # for '9.2.0', '9.2.01' must not pass for '9.2.0', and the optional
+    # v/V version marker must be a single marker, not part of a longer word.
+    # The same rules are implemented in install.sh (version_ok) and
+    # setup.iss (VersionInOutput).
+    $pattern = [regex]::Escape($Expected)
+    $plain = [regex]::IsMatch($reported, "(?<![0-9A-Za-z.])$pattern(?![0-9.])")
+    $marked = [regex]::IsMatch($reported, "(?<![0-9A-Za-z.])[vV]$pattern(?![0-9.])")
+    return $plain -or $marked
 }
 
 function Add-ToUserPath([string] $Directory) {
