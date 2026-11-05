@@ -1,0 +1,10 @@
+/* TEAM */
+Author, developer and owner: Al Shahriar Sowan
+Site: https://alshahriarsayon.vercel.app/
+GitHub: https://github.com/Alshahriar-07
+Studio: Eagox Studio (https://eagoxstudio.vercel.app/)
+
+/* SITE */
+Product: SeedCode CLI
+Last update: 2026-11-05
+Standards: HTML5, CSS3, JSON-LD
