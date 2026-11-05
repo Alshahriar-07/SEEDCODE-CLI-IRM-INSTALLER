@@ -46,7 +46,7 @@
       ]
     },
     {
-      "source": "/*.html",
+      "source": "/(.*)\\.html",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -84,7 +84,7 @@
       ]
     },
     {
-      "source": "/*.html",
+      "source": "/(.*)\\.html",
       "headers": [
         {
           "key": "Content-Security-Policy",
