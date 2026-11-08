@@ -1,0 +1,31 @@
+/* Legal pages keep the main site typography; these rules only make long-form
+   documents easier to read and print. */
+.legal-doc { max-width: 76ch; }
+.legal-doc h1 { margin-top: 0; }
+.legal-doc h2 { margin-top: 2.2em; }
+.legal-doc p, .legal-doc li { font-size: 1rem; line-height: 1.7; }
+.legal-doc table { width: 100%; border-collapse: collapse; margin: 1.2em 0; }
+.legal-doc th, .legal-doc td { border: 1px solid rgba(255, 255, 255, 0.16); padding: 10px 12px; text-align: left; vertical-align: top; }
+.legal-doc th { font-weight: 600; }
+.legal-updated { font-family: var(--mono, monospace); font-size: 12px; opacity: 0.7; }
+
+@media print {
+  .nav, .footer, .mobile, .skip { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .legal-doc a { color: #000 !important; }
+}
+
+/* Legal pages use the shared .content / .section-title / .lead markup. Cap the
+   measure at a readable width and give the long text its own rhythm. */
+.legal-page .content { max-width: 76ch; }
+.legal-page .content .section-title { font-size: 22px; margin: 2em 0 12px; }
+.legal-page .content .section-title:first-child { margin-top: 0; }
+.legal-page .content p, .legal-page .content li { color: #b6c1b8; line-height: 1.75; }
+.legal-page .content p { margin: 0 0 1em; }
+.legal-page .content .lead { font-size: 16.5px; max-width: none; margin: 0 0 1em; }
+.legal-page .content ul, .legal-page .content ol { margin: 0 0 1.2em; padding-left: 1.3em; }
+.legal-page .content li { margin: 0.45em 0; }
+.legal-page .content b, .legal-page .content strong { color: var(--text, #ecf2ee); font-weight: 600; }
+.legal-page .content a { color: var(--green, #72e39a); text-decoration: underline; text-underline-offset: 3px; }
+.legal-page .content code { font: 12.5px var(--mono, monospace); background: #ffffff0d; padding: 2px 7px; border-radius: 6px; overflow-wrap: anywhere; }
+.legal-page .content pre { overflow: auto; padding: 14px 16px; background: #050807; border: 1px solid #223027; border-radius: 12px; font: 12.5px/1.7 var(--mono, monospace); color: #d7e6da; }

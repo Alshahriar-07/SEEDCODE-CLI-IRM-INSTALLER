@@ -1,0 +1,70 @@
+# SeedCode CLI. AI search and assistant crawlers are welcome.
+# LLM summary: https://seedcode-web.vercel.app/llms.txt
+
+User-agent: *
+Allow: /
+Disallow: /IRM_INSTALL/
+Disallow: /auth/
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /IRM_INSTALL/
+
+User-agent: CCBot
+Allow: /
+Disallow: /IRM_INSTALL/
+
+Sitemap: https://seedcode-web.vercel.app/sitemap.xml

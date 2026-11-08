@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terminal connected · SeedCode CLI</title>
+<meta name="description" content="The SeedCode CLI terminal session was approved.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#07090a">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body data-page="success">
+<div class="auth-shell">
+  <header class="auth-top">
+    <div class="bar">
+      <a class="brand" href="/" aria-label="SeedCode CLI home"><img src="/assets/logo.svg" alt="" width="28" height="28"><span>seed<b>code</b> <i>cli</i></span></a>
+      <nav aria-label="Secondary"><a href="/install">Install</a><a href="/providers">Providers</a><a href="/auth/">Start over</a></nav>
+    </div>
+  </header>
+
+  <main class="auth-main" id="main">
+    <section class="panel" aria-labelledby="title">
+      <ol class="steps hidden" id="steps" aria-label="Sign-in progress"><li class="done" data-label="Enter code"></li><li class="done" data-label="GitHub"></li><li class="done" data-label="Approve"></li></ol>
+      <h1 id="title">Checking this approval…</h1>
+      <p id="success-lead" class="lead">Confirming the terminal approval with SeedCode. This only takes a moment.</p>
+
+      <noscript><p class="error">This page needs JavaScript to confirm the approval. Check your terminal instead.</p></noscript>
+
+      <div id="connected" class="hidden">
+        <div class="account">
+          <img id="avatar" class="hidden" alt="" width="44" height="44">
+          <div class="who">
+            <strong id="github-name">—</strong>
+            <span id="github-login">—</span>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Terminal</dt><dd id="connected-client">—</dd></div>
+          <div><dt>Session</dt><dd id="session-short">—</dd></div>
+          <div><dt>Status</dt><dd><span class="status">approved</span></dd></div>
+        </dl>
+      </div>
+
+      <p class="note"><strong>No Copilot plan on this GitHub account?</strong> The terminal tells you so instead of pretending to connect. Your credential is kept in your operating system’s credential store, never in this browser.</p>
+      <p id="success-note" class="small">If you just approved a terminal, it finishes on its own.</p>
+      <div class="btn-row">
+        <a class="btn ghost" href="/">Back to SeedCode CLI</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="auth-foot">
+    <span>© 2026 SeedCode CLI · Developed by <a href="https://alshahriarsayon.vercel.app/" rel="author">Al Shahriar Sowan</a></span>
+    <nav aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/security">Security</a><a href="/contact">Contact</a></nav>
+  </footer>
+</div>
+<script src="/script/config.js" defer></script>
+<script src="/script/session.js" defer></script>
+<script src="/script/auth.js" defer></script>
+</body>
+</html>

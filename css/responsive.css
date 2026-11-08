@@ -1,0 +1,3 @@
+/* Retired: layout rules now live in css/auth.css (sign-in pages) and
+   css/style.css (everything else). Kept as an empty stylesheet so cached
+   pages that still reference it do not 404. */

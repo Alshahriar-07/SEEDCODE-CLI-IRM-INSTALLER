@@ -1,0 +1,114 @@
+# SeedCode CLI: full reference
+
+Product: SeedCode CLI (also Seed Code CLI, seedcode-cli, seedcode)
+Version: 10.4.0 (2026-11-04)
+Author, developer and owner: Al Shahriar Sowan (https://alshahriarsayon.vercel.app/)
+Studio: Eagox Studio (https://eagoxstudio.vercel.app/)
+Website: https://seedcode-web.vercel.app/
+Source: https://github.com/Alshahriar-07/seedcode-cli
+License: PolyForm Noncommercial License 1.0.0 (https://polyformproject.org/licenses/noncommercial/1.0.0)
+Platforms: Windows 10/11, Linux, macOS
+
+## What it is
+SeedCode CLI is a workspace-aware AI coding agent for the terminal. The user selects a project folder; the agent indexes it, reads only the context a task needs, edits real files, runs commands in the workspace and verifies the outcome. A task is not reported complete because a model says so; completion is gated on observed evidence such as a changed file or a command exit code.
+
+## Features
+- Understands the project: Indexes the selected folder, searches files and reads only the context a task needs. Project memory lives in .seedcode.
+- Changes actual files: Create, edit, move, copy, rename and delete files with real operation results and bounded diffs.
+- Runs the commands: Executes commands in the workspace, streams output and records exit codes and duration.
+- Evidence over claims: Runs tests and checks results. A task is not reported complete just because a model says it is.
+- Looks up documentation: When a task needs current information, built-in web search and page fetching bring sources into the workflow.
+- Permission before risk: Dangerous shell commands, deletes, git mutations and writes outside the workspace request approval.
+
+## Install
+Windows (PowerShell 5.1+, current user, no administrator rights, Python not required):
+  irm https://seedcode-web.vercel.app/install.ps1 | iex
+Linux and macOS (uses a standalone binary when published, otherwise the official Python wheel; Python 3.10+ and pip or pipx may be needed):
+  curl -fsSL https://seedcode-web.vercel.app/install.sh | bash
+Any platform (Python 3.10+): pip install seedcode-cli
+From source: git clone https://github.com/Alshahriar-07/seedcode-cli.git ; cd seedcode-cli ; python -m pip install -e ".[dev]"
+Windows portable executable and setup wizard: https://github.com/Alshahriar-07/seedcode-cli/releases/tag/v10.4.0
+Launch: seedcode    Verify: seedcode --version (reports 10.4.0)
+Remote installers verify the release SHA256SUMS.txt and abort on any mismatch or missing checksum.
+
+## Providers
+- Default (API key: No): Built-in connection; also supports OPENROUTER_API_KEY / SEEDCODE_DEFAULT_API_KEY.
+- OpenRouter (API key: Yes): Use your own OpenRouter key and model.
+- FreeModel Claude (API key: Yes): FreeModel backend, Claude models.
+- FreeModel Codex (API key: Yes): FreeModel backend, Codex models.
+- AeroLink (API key: Yes): AeroLink backend.
+- Ollama (API key: No): Run local models. Seed Code starts ollama serve when needed.
+- Custom (API key: Depends): Any OpenAI-compatible endpoint: name, base URL, key and model.
+Execution profiles:
+- Small / Compact context: Short sequential instructions, explicit tool protocol and tighter call/output budgets for smaller local models.
+- Standard / Balanced execution: General coding models with normal context, step and tool-call budgets.
+- Advanced / Full capability: Strong models receive fuller context and larger orchestration budgets.
+A local Ollama session is never silently moved to a cloud provider; local-to-cloud failover requires the explicit allow_local_to_cloud opt-in.
+Ollama quick start: ollama pull qwen3:4b ; seedcode ; /provider -> Ollama ; /model -> qwen3:4b
+
+## Commands
+- /help: Show available commands
+- /status: Show live runtime status
+- /provider: Select or manage the active provider
+- /provider test: Test the active connection
+- /model: Browse and select a model
+- /models: Manage model IDs, fallback models and execution profiles
+- /custom: Manage custom providers
+- /apikey: View, replace, remove or validate the active key
+- /workspace: Show or change the active project folder
+- /permission: Show or set the tool permission level
+- /session: Show agent session state and per-task records
+- /pause /resume /stop: Pause, resume or stop the running agent session
+- /memory: Show .seedcode project memory and recent session notes
+- /index: Show a compact project tree
+- /files: Search project files
+- /tools: List tools available to the coding agent
+- /agents: List or switch agent profiles
+- /history: Browse saved sessions
+- /doctor: Diagnose configuration, network and provider health
+- /settings: Open interactive settings
+- /theme: Pick a colour theme
+- /palette: Open command palette
+- /shortcuts: Show keyboard shortcuts
+- /reset: Forget current conversation context
+- /clear: Clear the screen
+- /config: Show current configuration
+- /about /version: Show product information and version
+- /exit: Leave the session
+
+## Keyboard shortcuts
+- Enter: Send message
+- Shift+Enter: Insert a newline
+- ↑ / ↓: Move inside a message or walk history at the edges
+- Ctrl+C: Cancel the running turn or clear composer
+- Esc: Dismiss suggestions or deny a permission prompt
+- Ctrl+E: Expand the last file diff
+- Ctrl+T: Expand the last command output
+- Ctrl+K: Open command palette
+- Ctrl+D: Exit
+
+## Releases (v10.4.0)
+Artifacts: SeedCode-CLI-10.4.0-windows-x64.exe (portable), SeedCode-CLI-Setup-10.4.0.exe (setup wizard), seedcode_cli-10.4.0-py3-none-any.whl, seedcode_cli-10.4.0.tar.gz, seedcode-cli-10.4.0.tgz (npm launcher), SHA256SUMS.txt.
+Release page: https://github.com/Alshahriar-07/seedcode-cli/releases/tag/v10.4.0 ; notes: https://github.com/Alshahriar-07/seedcode-cli/blob/main/RELEASE.md
+
+## License summary (informational; the license text governs)
+Allowed: personal, educational, research, hobby and other noncommercial use; modifying the source; sharing copies with the license and required notice. Not allowed: commercial use without a separate license; removing the license terms. Commercial licensing: contact the author at https://alshahriarsayon.vercel.app/.
+
+## FAQ
+Q: What is SeedCode CLI?
+A: SeedCode CLI (also written Seed Code CLI) is an AI coding agent that runs in your terminal. It reads the project folder you choose, edits real files, runs commands and checks the result before it reports a task as done.
+
+Q: Is SeedCode CLI free?
+A: SeedCode CLI is free for personal, educational, research and other noncommercial use under the PolyForm Noncommercial License 1.0.0. Commercial use needs a separate license from the author. Local models through Ollama need no API key.
+
+Q: Which platforms does SeedCode CLI support?
+A: Windows 10 and 11, Linux and macOS. Windows has a PowerShell installer, a setup wizard and a portable executable. Linux and macOS use a shell installer. The Python package works on any OS with Python 3.10 or newer.
+
+Q: Can SeedCode CLI run local models with Ollama?
+A: Yes. Choose Ollama as the provider and SeedCode CLI starts ollama serve when needed. Ollama is the recommended way to try SeedCode CLI for free. A local session is never silently moved to a cloud provider.
+
+Q: How do I install SeedCode CLI?
+A: On Windows, run irm https://seedcode-web.vercel.app/install.ps1 | iex in PowerShell. On Linux or macOS, run curl -fsSL https://seedcode-web.vercel.app/install.sh | bash. Then type seedcode in your project folder.
+
+Q: Who made SeedCode CLI?
+A: SeedCode CLI is written and owned by Al Shahriar Sowan and published under Eagox Studio.

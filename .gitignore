@@ -1,0 +1,12 @@
+# Website dependencies and Vercel project state (never committed).
+node_modules/
+.vercel/
+.env
+.env.local
+.env.*.local
+*.log
+
+# The site was previously a standalone git checkout. Its git directory was
+# moved aside so WEB/ can be tracked by the main repository; keep it out of
+# source control.
+.git-worktree-backup/

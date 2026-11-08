@@ -1,0 +1,15 @@
+{
+  "name": "seedcode-web",
+  "private": true,
+  "description": "SeedCode CLI website and GitHub sign-in backend (Vercel).",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:browser": "node --test tests/ui.browser.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

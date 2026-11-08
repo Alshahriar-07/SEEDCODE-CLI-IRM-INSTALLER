@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connection denied · SeedCode CLI</title>
+<meta name="description" content="The SeedCode CLI terminal connection was denied.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#07090a">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body data-page="denied">
+<div class="auth-shell">
+  <header class="auth-top">
+    <div class="bar">
+      <a class="brand" href="/" aria-label="SeedCode CLI home"><img src="/assets/logo.svg" alt="" width="28" height="28"><span>seed<b>code</b> <i>cli</i></span></a>
+      <nav aria-label="Secondary"><a href="/install">Install</a><a href="/providers">Providers</a><a href="/auth/">Start over</a></nav>
+    </div>
+  </header>
+
+  <main class="auth-main" id="main">
+    <section class="panel" aria-labelledby="title">
+      <p><span class="status denied">denied</span></p>
+      <h1 id="title">Connection denied</h1>
+      <p class="lead">This terminal wasn’t approved. Nothing was sent to it and the request is cancelled.</p>
+      <p class="note">Changed your mind? Run <code>/provider</code> in your terminal, choose <strong>GitHub Copilot</strong> and start a new login. Every request is single-use and expires on its own.</p>
+      <div class="btn-row">
+        <a class="btn" href="/auth/">Start a new login</a>
+        <a class="btn ghost" href="/">Back to SeedCode CLI</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="auth-foot">
+    <span>© 2026 SeedCode CLI · Developed by <a href="https://alshahriarsayon.vercel.app/" rel="author">Al Shahriar Sowan</a></span>
+    <nav aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/security">Security</a><a href="/contact">Contact</a></nav>
+  </footer>
+</div>
+</body>
+</html>

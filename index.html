@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>
+   SeedCode CLI — Free AI Coding Agent for Your Terminal
+  </title>
+  <meta content="SeedCode CLI is a free AI coding agent for your terminal. It edits real files, runs commands and verifies results on Windows, Linux and macOS. Works with Ollama." name="description">
+  <meta content="SeedCode CLI, Seed Code CLI, seedcode-cli, seedcode, AI coding agent, terminal AI coding assistant, CLI coding agent, Ollama coding agent, local LLM coding, Al Shahriar Sowan, Eagox Studio, free AI coding agent, Windows, Linux, macOS" name="keywords">
+  <meta content="Al Shahriar Sowan" name="author">
+  <meta content="SeedCode CLI" name="application-name">
+  <meta content="SeedCode CLI" name="apple-mobile-web-app-title">
+  <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots">
+  <meta content="#07090a" name="theme-color">
+  <meta content="dark" name="color-scheme">
+  <link href="https://seedcode-web.vercel.app/" rel="canonical">
+  <link href="https://seedcode-web.vercel.app/" hreflang="en" rel="alternate">
+  <link href="https://seedcode-web.vercel.app/" hreflang="x-default" rel="alternate">
+  <link href="/llms.txt" rel="alternate" title="SeedCode CLI summary for LLMs" type="text/plain">
+  <link href="https://alshahriarsayon.vercel.app/" rel="author">
+  <link href="/site.webmanifest" rel="manifest">
+  <link href="/assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="/assets/icon-192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="/assets/seedcode.ico" rel="icon" sizes="any">
+  <link href="/assets/logo.svg" rel="icon" type="image/svg+xml">
+  <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta content="website" property="og:type">
+  <meta content="SeedCode CLI" property="og:site_name">
+  <meta content="en_US" property="og:locale">
+  <meta content="SeedCode CLI — Free AI Coding Agent for Your Terminal" property="og:title">
+  <meta content="SeedCode CLI is a free AI coding agent for your terminal. It edits real files, runs commands and verifies results on Windows, Linux and macOS. Works with Ollama." property="og:description">
+  <meta content="https://seedcode-web.vercel.app/" property="og:url">
+  <meta content="https://seedcode-web.vercel.app/assets/og-image.png" property="og:image">
+  <meta content="1200" property="og:image:width">
+  <meta content="630" property="og:image:height">
+  <meta content="SeedCode CLI: free AI coding agent for your terminal" property="og:image:alt">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="SeedCode CLI — Free AI Coding Agent for Your Terminal" name="twitter:title">
+  <meta content="SeedCode CLI is a free AI coding agent for your terminal. It edits real files, runs commands and verifies results on Windows, Linux and macOS. Works with Ollama." name="twitter:description">
+  <meta content="https://seedcode-web.vercel.app/assets/og-image.png" name="twitter:image">
+  <meta content="@Alshahriar_07" name="twitter:creator">
+  <!-- External fonts and local stylesheets -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link as="image" fetchpriority="high" href="/assets/tui.png" rel="preload">
+  <link href="/css/style.css" rel="stylesheet">
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+   {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://seedcode-web.vercel.app/#website","url":"https://seedcode-web.vercel.app/","name":"SeedCode CLI","alternateName":["Seed Code CLI","seedcode-cli","SeedCode"],"inLanguage":"en","publisher":{"@id":"https://seedcode-web.vercel.app/#studio"},"author":{"@id":"https://seedcode-web.vercel.app/#author"}},{"@type":"SoftwareApplication","@id":"https://seedcode-web.vercel.app/#software","name":"SeedCode CLI","alternateName":["Seed Code CLI","seedcode-cli","SeedCode"],"description":"SeedCode CLI is a free AI coding agent for your terminal. It edits real files, runs commands and verifies results on Windows, Linux and macOS. Works with Ollama.","url":"https://seedcode-web.vercel.app/","applicationCategory":"DeveloperApplication","applicationSubCategory":"AI coding agent","operatingSystem":"Windows 10, Windows 11, Linux, macOS","softwareVersion":"10.4.0","datePublished":"2026-11-04","dateModified":"2026-11-05","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free for personal, educational and other noncommercial use"},"downloadUrl":"https://github.com/Alshahriar-07/seedcode-cli/releases/tag/v10.4.0","installUrl":"https://seedcode-web.vercel.app/install.html","softwareHelp":"https://seedcode-web.vercel.app/commands.html","releaseNotes":"https://github.com/Alshahriar-07/seedcode-cli/blob/main/RELEASE.md","codeRepository":"https://github.com/Alshahriar-07/seedcode-cli","license":"https://polyformproject.org/licenses/noncommercial/1.0.0","image":"https://seedcode-web.vercel.app/assets/og-image.png","screenshot":{"@type":"ImageObject","url":"https://seedcode-web.vercel.app/assets/tui.png","caption":"SeedCode CLI terminal interface"},"keywords":"SeedCode CLI, Seed Code CLI, seedcode-cli, seedcode, AI coding agent, terminal AI coding assistant, CLI coding agent, Ollama coding agent, local LLM coding, Al Shahriar Sowan, Eagox Studio","featureList":["Workspace-aware project indexing","Real file operations with bounded diffs","Terminal command execution","Evidence-based verification","Built-in web search and page fetching","Permission prompts before risky actions","Local models through Ollama","OpenAI-compatible custom providers"],"author":{"@id":"https://seedcode-web.vercel.app/#author"},"creator":{"@id":"https://seedcode-web.vercel.app/#author"},"maintainer":{"@id":"https://seedcode-web.vercel.app/#author"},"copyrightHolder":{"@id":"https://seedcode-web.vercel.app/#author"},"copyrightYear":2026,"publisher":{"@id":"https://seedcode-web.vercel.app/#studio"},"sameAs":["https://github.com/Alshahriar-07/seedcode-cli"]},{"@type":"Person","@id":"https://seedcode-web.vercel.app/#author","name":"Al Shahriar Sowan","alternateName":"Al Shahriar Sayon","url":"https://alshahriarsayon.vercel.app/","jobTitle":"Frontend Developer and AI Tool Builder","sameAs":["https://github.com/Alshahriar-07","https://alshahriarsayon.vercel.app/","https://eagoxstudio.vercel.app/"]},{"@type":"Organization","@id":"https://seedcode-web.vercel.app/#studio","name":"Eagox Studio","url":"https://eagoxstudio.vercel.app/","founder":{"@id":"https://seedcode-web.vercel.app/#author"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is SeedCode CLI?","acceptedAnswer":{"@type":"Answer","text":"SeedCode CLI (also written Seed Code CLI) is an AI coding agent that runs in your terminal. It reads the project folder you choose, edits real files, runs commands and checks the result before it reports a task as done."}},{"@type":"Question","name":"Is SeedCode CLI free?","acceptedAnswer":{"@type":"Answer","text":"SeedCode CLI is free for personal, educational, research and other noncommercial use under the PolyForm Noncommercial License 1.0.0. Commercial use needs a separate license from the author. Local models through Ollama need no API key."}},{"@type":"Question","name":"Which platforms does SeedCode CLI support?","acceptedAnswer":{"@type":"Answer","text":"Windows 10 and 11, Linux and macOS. Windows has a PowerShell installer, a setup wizard and a portable executable. Linux and macOS use a shell installer. The Python package works on any OS with Python 3.10 or newer."}},{"@type":"Question","name":"Can SeedCode CLI run local models with Ollama?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose Ollama as the provider and SeedCode CLI starts ollama serve when needed. Ollama is the recommended way to try SeedCode CLI for free. A local session is never silently moved to a cloud provider."}},{"@type":"Question","name":"How do I install SeedCode CLI?","acceptedAnswer":{"@type":"Answer","text":"On Windows, run irm https://seedcode-web.vercel.app/install.ps1 | iex in PowerShell. On Linux or macOS, run curl -fsSL https://seedcode-web.vercel.app/install.sh | bash. Then type seedcode in your project folder."}},{"@type":"Question","name":"Who made SeedCode CLI?","acceptedAnswer":{"@type":"Answer","text":"SeedCode CLI is written and owned by Al Shahriar Sowan and published under Eagox Studio."}}]}]}
+  </script>
+ </head>
+ <body>
+  <!-- Accessibility: skip directly to the main content -->
+  <a class="skip" href="#main">
+   Skip to content
+  </a>
+  <div class="wrap">
+   <!-- ================================================== -->
+  <!-- SITE HEADER AND PRIMARY NAVIGATION                -->
+  <!-- ================================================== -->
+  <header class="nav">
+    <a aria-label="SeedCode CLI home" class="brand" href="/">
+     <img alt="" src="/assets/logo.svg">
+     <span>
+      seed
+      <b>
+       code
+      </b>
+      <i>
+       cli
+      </i>
+     </span>
+    </a>
+    <nav class="navlinks" aria-label="Primary">
+     <a aria-current="page" class="active" href="/">
+      Overview
+     </a>
+     <a href="/features">
+      Features
+     </a>
+     <a href="/install">
+      Install
+     </a>
+     <a href="/providers">
+      Providers
+     </a>
+     <a href="/commands">
+      Commands
+     </a>
+     <a href="/releases">
+      Releases
+     </a>
+     <a href="/auth/">
+      Sign in
+     </a>
+     <a class="nav-cta" href="https://github.com/Alshahriar-07/seedcode-cli/releases/tag/v10.4.0">
+      <i data-i="box">
+      </i>
+      Download
+     </a>
+    </nav>
+    <button aria-expanded="false" aria-label="Toggle navigation" class="mobile">
+     <i data-i="menu">
+     </i>
+    </button>
+   </header>
+  </div>
+  <!-- ================================================== -->
+  <!-- MAIN PAGE CONTENT                                  -->
+  <!-- ================================================== -->
+  <main id="main">
+   <!-- Hero section: introduction, install commands, download and product screenshot -->
+   <section class="wrap hero">
+    <h1>
+     <small class="sr">
+      SeedCode CLI:
+     </small>
+     Give your terminal
+     <br>
+     <span>
+      the ability to build.
+     </span>
+    </h1>
+    <p>
+     SeedCode CLI is a workspace-aware AI coding agent for your terminal. It reads your project, changes real files, runs commands and verifies the result.
+    </p>
+    <div class="home-actions">
+     <div class="install">
+      <div aria-label="Install method" class="tabs" role="group">
+       <button class="on" data-cmd="irm https://seedcode-web.vercel.app/install.ps1 | iex" data-pre="PS&gt;">
+        <i data-i="win">
+        </i>
+        Windows
+       </button>
+       <button data-cmd="curl -fsSL https://seedcode-web.vercel.app/install.sh | bash" data-pre="$">
+        <i data-i="terminal">
+        </i>
+        Linux / macOS
+       </button>
+       <button data-cmd="pip install seedcode-cli" data-pre="$">
+        <i data-i="code">
+        </i>
+        pip
+       </button>
+      </div>
+      <div class="terminal">
+       <code>
+        <i>
+         PS&gt;
+        </i>
+        <span id="cmd">
+         irm https://seedcode-web.vercel.app/install.ps1 | iex
+        </span>
+       </code>
+       <button class="copy" data-copy="irm https://seedcode-web.vercel.app/install.ps1 | iex">
+        COPY
+       </button>
+      </div>
+     </div>
+     <a class="download" href="https://github.com/Alshahriar-07/seedcode-cli/releases/download/v10.4.0/SeedCode-CLI-Setup-10.4.0.exe">
+      <span>
+       <strong>
+        Download for Windows
+       </strong>
+       <small>
+        SeedCode-CLI-10.4.0-setup.exe ·
+        <span data-release-size="">
+         Windows x64 · setup executable
+        </span>
+       </small>
+      </span>
+      <span class="arrow">
+       <i data-i="box">
+       </i>
+      </span>
+     </a>
+     <div class="tip">
+      <span class="ico">
+       <i data-i="sprout">
+       </i>
+      </span>
+      <span>
+       <b>
+        Best experience, free:
+       </b>
+       pair Seed Code with
+       <a href="/providers">
+        Ollama
+       </a>
+       and run models locally. No API key, no cost.
+      </span>
+     </div>
+    </div>
+    <figure class="shot">
+     <div class="bar">
+      <span class="dots">
+       <b>
+       </b>
+       <b>
+       </b>
+       <b>
+       </b>
+      </span>
+      <span class="ttl">
+       Seed Code CLI · terminal UI
+      </span>
+     </div>
+     <img alt="SeedCode CLI terminal UI showing the SEED CODE logo, the Ask anything prompt, Build agent and Ollama model" fetchpriority="high" height="625" src="/assets/tui.png" width="1113">
+    </figure>
+   </section>
+   <!-- Product highlights -->
+   <section class="wrap content">
+    <div class="grid3">
+     <a class="card" href="/features">
+      <div class="ico">
+       <i data-i="folder">
+       </i>
+      </div>
+      <h3>
+       Reads your project
+      </h3>
+      <p>
+       Indexes the folder you choose and pulls in only the context a task needs.
+      </p>
+     </a>
+     <a class="card" href="/features">
+      <div class="ico">
+       <i data-i="pencil">
+       </i>
+      </div>
+      <h3>
+       Edits real files
+      </h3>
+      <p>
+       Create, edit, move and delete with real operation results and bounded diffs.
+      </p>
+     </a>
+     <a class="card" href="/features">
+      <div class="ico">
+       <i data-i="check">
+       </i>
+      </div>
+      <h3>
+       Verifies the result
+      </h3>
+      <p>
+       Runs tests and checks exit codes. Done means evidence, not a model's claim.
+      </p>
+     </a>
+    </div>
+   </section>
+   <!-- Product overview, product facts and frequently asked questions -->
+   <section class="wrap content about">
+    <h2 class="section-title">
+     What is SeedCode CLI?
+    </h2>
+    <p class="lead">
+     SeedCode CLI (also written Seed Code CLI) is a free AI coding agent that runs in your terminal on Windows, Linux and macOS. Pick a project folder, describe a task, and it reads the code, edits real files, runs commands and checks the result before it reports the task done. It works with local models through Ollama and with cloud providers such as OpenRouter or any OpenAI-compatible endpoint.
+    </p>
+    <dl class="facts">
+     <div>
+      <dt>
+       Product
+      </dt>
+      <dd>
+       SeedCode CLI (Seed Code CLI), version 10.4.0
+      </dd>
+     </div>
+     <div>
+      <dt>
+       Author, developer and owner
+      </dt>
+      <dd>
+       <a href="https://alshahriarsayon.vercel.app/" rel="author">
+        Al Shahriar Sowan
+       </a>
+      </dd>
+     </div>
+     <div>
+      <dt>
+       Studio
+      </dt>
+      <dd>
+       <a href="https://eagoxstudio.vercel.app/">
+        Eagox Studio
+       </a>
+      </dd>
+     </div>
+     <div>
+      <dt>
+       Platforms
+      </dt>
+      <dd>
+       Windows 10/11, Linux, macOS
+      </dd>
+     </div>
+     <div>
+      <dt>
+       License
+      </dt>
+      <dd>
+       PolyForm Noncommercial 1.0.0 ·
+       <a href="/license">
+        terms
+       </a>
+      </dd>
+     </div>
+     <div>
+      <dt>
+       Run it
+      </dt>
+      <dd>
+       <code>
+        seedcode
+       </code>
+      </dd>
+     </div>
+     <div>
+      <dt>
+       Source
+      </dt>
+      <dd>
+       <a href="https://github.com/Alshahriar-07/seedcode-cli">
+        github.com/Alshahriar-07/seedcode-cli
+       </a>
+      </dd>
+     </div>
+    </dl>
+    <div class="section faq" style="margin-top:46px">
+     <h2 class="section-title">
+      SeedCode CLI questions
+     </h2>
+     <details open="">
+      <summary>
+       What is SeedCode CLI?
+      </summary>
+      <p>
+       SeedCode CLI (also written Seed Code CLI) is an AI coding agent that runs in your terminal. It reads the project folder you choose, edits real files, runs commands and checks the result before it reports a task as done.
+      </p>
+     </details>
+     <details>
+      <summary>
+       Is SeedCode CLI free?
+      </summary>
+      <p>
+       SeedCode CLI is free for personal, educational, research and other noncommercial use under the PolyForm Noncommercial License 1.0.0. Commercial use needs a separate license from the author. Local models through Ollama need no API key.
+      </p>
+     </details>
+     <details>
+      <summary>
+       Which platforms does SeedCode CLI support?
+      </summary>
+      <p>
+       Windows 10 and 11, Linux and macOS. Windows has a PowerShell installer, a setup wizard and a portable executable. Linux and macOS use a shell installer. The Python package works on any OS with Python 3.10 or newer.
+      </p>
+     </details>
+     <details>
+      <summary>
+       Can SeedCode CLI run local models with Ollama?
+      </summary>
+      <p>
+       Yes. Choose Ollama as the provider and SeedCode CLI starts
+       <code>
+        ollama serve
+       </code>
+       when needed. Ollama is the recommended way to try SeedCode CLI for free. A local session is never silently moved to a cloud provider.
+      </p>
+     </details>
+     <details>
+      <summary>
+       How do I install SeedCode CLI?
+      </summary>
+      <p>
+       On Windows, run
+       <code>
+        irm https://seedcode-web.vercel.app/install.ps1 | iex
+       </code>
+       in PowerShell. On Linux or macOS, run
+       <code>
+        curl -fsSL https://seedcode-web.vercel.app/install.sh | bash
+       </code>
+       . Then type
+       <code>
+        seedcode
+       </code>
+       in your project folder.
+      </p>
+     </details>
+     <details>
+      <summary>
+       Who made SeedCode CLI?
+      </summary>
+      <p>
+       SeedCode CLI is written and owned by
+       <a href="https://alshahriarsayon.vercel.app/" rel="author">
+        Al Shahriar Sowan
+       </a>
+       and published under
+       <a href="https://eagoxstudio.vercel.app/">
+        Eagox Studio
+       </a>
+       .
+      </p>
+     </details>
+    </div>
+   </section>
+  </main>
+  <!-- ================================================== -->
+  <!-- FOOTER: LEGAL PAGES AND EXTERNAL RESOURCES         -->
+  <!-- ================================================== -->
+  <footer class="wrap footer">
+   <span>
+    © 2026 SeedCode CLI · Developed by
+    <a href="https://alshahriarsayon.vercel.app/" rel="author">
+     Al Shahriar Sowan
+    </a>
+   </span>
+   <span>
+    <a href="/terms">
+     Terms
+    </a>
+    <a href="/privacy">
+     Privacy
+    </a>
+    <a href="/acceptable-use">
+     Acceptable Use
+    </a>
+    <a href="/security">
+     Security
+    </a>
+    <a href="/contact">
+     Contact
+    </a>
+    <a href="/delete-account">
+     Data deletion
+    </a>
+    <a href="/license">
+     License
+    </a>
+    <a href="https://github.com/Alshahriar-07/seedcode-cli">
+     GitHub
+    </a>
+    <a href="https://eagoxstudio.vercel.app/">
+     Eagox Studio
+    </a>
+    <a href="/llms.txt">
+     llms.txt
+    </a>
+    <a href="/sitemap.xml">
+     Sitemap
+    </a>
+   </span>
+  </footer>
+  <!-- Main JavaScript: navigation, tabs, copy buttons and UI interactions -->
+  <script defer="" src="/script/main.js">
+  </script>
+ </body>
+</html>
